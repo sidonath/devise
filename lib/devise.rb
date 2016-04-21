@@ -287,6 +287,10 @@ module Devise
   mattr_accessor :token_generator
   @@token_generator = nil
 
+  # When false, Devise will not attempt to reload routes on eager load
+  mattr_accessor :reload_routes
+  @@reload_routes = true
+
   # Default way to setup Devise. Run rails generate devise_install to create
   # a fresh initializer with all configuration values.
   def self.setup
